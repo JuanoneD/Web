@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Sankofa+Display&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background: linear-gradient(to right,#00ffff,#0022dd);
+            display: flex;
+            height: 80px;
+            width: 100%;
+        }
+        header img{
+            height: 0%;
+        }
+        header h1{
+            font-family: "Grey Qo", cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 50px;
+            font-style: oblique;
+        }
+        header .right{
+            align-items: center;
+            width: 50%;
+            display: flex;
+            justify-content: right;
+        }
+        header .left{
+            width: 50%;
+            display: flex;
+            align-items: center;
+        }
+        header input{
+            border-radius: 10px;
+            height: 25px;
+            border: none;
+        }
+        header button{
+            border-radius: 5px;
+            height: 30px;
+            margin: 1%;
+            border: solid;
+        }
+        main{
+            width: 100%;
+        }
+        .displayBooks{
+            margin: 1%;
+        }
+        .displayBooks .title{
+            align-items: center;
+            text-align: center;
+            font-size: 25px;
+        }
+        .displayBooks .bookshelf{
+            display: flex;
+            margin-top: 1%;
+            padding: 1%;
+            justify-content: center;
+        }
+        .bookshelf img{
+            width: 300px;
+            height: 460px;
+        }
+        .books{
+            margin: 1%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="left">
+            <a href="Exer1.html"><img src="https://viverdeblog.com/wp-content/uploads/2017/04/como-escrever-um-livro-topo.png" width="100px" alt=""></a>
+            <h1>Livrarias</h1>
+        </div>
+        <div class="right">
+            <input type="text">
+            <button>Pesquisar</button>
+        </div>
+    </header>
+    <main>
+        <div class="displayBooks">
+            <div class="title">
+                Escolha sua Aventura!
+            </div>
+            <div class="bookshelf">
+                <div class="books"><a href="#"><img src="https://m.media-amazon.com/images/I/418hYhj8vZL._SY445_SX342_.jpg" alt=""></a></div>
+                <div class="books"><a href="#"><img src="https://books.google.com.br/books/content?id=UsJe_PlbnWcC&hl=pt-BR&pg=PP1&img=1&zoom=3&bul=1&sig=ACfU3U3Hsl2e1Vi3et35eui5cApCGyoxmA&w=1280" alt=""></a></div>
+                <div class="books"><a href="#"><img src="https://m.media-amazon.com/images/I/51cF-t5bxTL._SY445_SX342_.jpg" alt=""></a></div>
+                <div class="books"><a href="#"><img src="https://m.media-amazon.com/images/I/61ud5BuLRML._SY466_.jpg" alt=""></a></div>
+                <div class="books"><a href="#"><img src="https://m.media-amazon.com/images/I/71peoM4V0lL._SY466_.jpg" alt=""></a></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

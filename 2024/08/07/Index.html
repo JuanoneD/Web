@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1,#div2{
+            width: 1000px;
+            height: 100px;
+            font-family: "Sankofa Display", sans-serif;
+            font-weight: 400;
+            font-style: oblique;
+            color: aliceblue;
+            font-size: 100px;
+            padding: 1%;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            border-radius: 15px;
+        }
+        #div1{
+            background-image: url("https://love.doghero.com.br/wp-content/uploads/2018/12/golden-retriever-1.png");
+            background-position: center;
+            position: absolute;
+            z-index: 1;
+        }
+        #div2{
+            z-index: 0;
+            background-color: blueviolet;
+            position: fixed;
+        }
+        #div3{
+            height: 1200px;
+            width: 2%;
+            background-color: aquamarine;
+        }
+        #div1 houver,#div2 houver{
+            transform: rotateX('230');
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sankofa+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="div1">
+        CONTEUDO
+    </div>
+    <div id="div2">
+        conteudo
+    </div>
+    <div id="div3">
+
+    </div>
+</body>
+</html>
