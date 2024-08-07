@@ -1,0 +1,26 @@
+body{
+    padding: 0;
+    margin: none;
+}
+header{
+    display: flex;
+    background-color: coral;
+    justify-content: space-between;
+    padding: 1%;
+}
+#rightHeader{
+    display: flex;
+    align-items: center;
+}
+#leftHeader{
+    display: flex;
+    align-items: center;
+}
+.buttonHeader{
+    display: flex;
+    height: 100%;
+    margin-left: 5%;
+    padding: 1%;
+    align-items: center;
+    text-align: center;
+}
