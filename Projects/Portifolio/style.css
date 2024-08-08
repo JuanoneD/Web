@@ -4,7 +4,7 @@ body{
 }
 header{
     display: flex;
-    background-color: coral;
+    background-color: rgb(5, 4, 4);
     justify-content: space-between;
     padding: 1%;
     color: white;
@@ -28,4 +28,87 @@ header{
 .buttonHeader a{
     text-decoration: none;
     color: white;
+}
+.Titles{
+    text-align: center;
+    margin: 1%;
+    padding: 1%;
+}
+#aboutMe{
+    margin: 1%;
+    display: flex;
+    padding: 1%;
+}
+#ImgaboutMe img{
+    width: 40vh;
+    height: 40vh;
+}
+
+#TextaboutMe{
+    text-align: left;
+    text-justify: auto;
+    padding: 1%;
+}
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+  }
+.roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 50px;
+  }
+#AcademySkills{
+    margin-top: 5%;
+    display: flex;
+    padding: 1%;
+    justify-content: center;
+}
+#Academic{
+    width: 50%;
+}
+#AcademySkills .roboto-bold-italic{
+    font-size: 25px;
+}
+#AcademySkills .roboto-regular{
+    font-size: 19px;
+}
+#Academic summary {
+    padding: 4px;
+    box-shadow: 1px 1px 2px #bbbbbb;
+    cursor: pointer;
+  }
+#DisplayProjects{
+    margin: 1%;
+    padding: 1%;
+    display: flex;
+}
+
+.Project{
+    background-color: aqua;
+    border-radius: 30px;
+    width: 600px;
+    border: solid;
+}
+.Project a{
+    display: flex;
+    justify-content: center;
+}
+.Project img{
+    width: 100%;
+    border-top-left-radius: 26px;
+    border-top-right-radius: 26px
+}
+.Project .roboto-bold-italic{
+    font-size: 30px;
+}
+.Project  .roboto-regular{
+    font-size: 15px;
+}
+.textProject{
+    padding: 1%;
+    margin: 1%;
 }
