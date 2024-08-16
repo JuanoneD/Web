@@ -1,6 +1,7 @@
 function ChangeImg(){
     document.getElementById("ImgLink").click();
 }
+
 function UpdateImg(){
     let img = document.getElementById("UserImg");
     
