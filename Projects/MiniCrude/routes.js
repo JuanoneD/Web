@@ -17,3 +17,4 @@ route.get('/RegisterStudent',cadastro.aluno);
 route.post('/RegisterClass',cadastro.salaInsert);
 route.post('/RegisterStudent',cadastro.alunoInsert);
 route.post('/Index',home.pagInicialPost);
+route.post('/',home.pagInicialPost);
