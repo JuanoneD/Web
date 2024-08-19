@@ -10,6 +10,10 @@ function UpdateImg(){
     }
 
     let reader = new FileReader();
-    reader.onload = (e)=>img.src = e.target.result;
+    reader.onload = (e)=>{
+        img.src = e.target.result;
+        document.getElementById("ImgLink").value = e.target.result;
+    };
     reader.readAsDataURL(document.getElementById("ImgLink").files[0]);
+
 }

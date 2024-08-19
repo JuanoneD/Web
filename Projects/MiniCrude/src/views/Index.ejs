@@ -10,7 +10,7 @@
     <header class="shadow">
         <div class="navbar navbar-expand-lg bg-body-tertiary" style="flex-wrap: nowrap;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="Index.html">
+                <a class="navbar-brand" href="/Index">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-oTCfJdO8zwDoyHB7j5tktdQq31w6t31GsA&s" alt="" height="60px">
                     Mini Crude
                 </a>
@@ -34,12 +34,20 @@
 
     <main>
         <div class="container d-flex justify-content-end" style="margin-top: 1%;">
+
+            <form method="post" onchange="document.getElementById('mudarSala').click()">
                 <div class="d-flex ">
                     <label for="Select" class="form-label p-2">Sala:</label>
-                    <select id="Select" class="form-select">
-                    <option>select</option>
+                    <select id="Select" name="sala_filter" class="form-select">
+                        <option value="">Selecionar um opção</option>
+                        <% for(let i=0;i<salas.length;i++){ %>
+                        <option value='<%= salas[i].IDSala %>' <%= id_filter == salas[i].IDSala ? 'selected' : ''%>> <%= salas[i].Nome %> </option>
+                    <% } %>
                     </select>
                 </div>
+                <input type="submit" hidden id="mudarSala">
+            </form>
+
         </div>
         <div class="container">
             <div>
@@ -48,18 +56,21 @@
 
             <div class="card-group container">
 
-                <div class="container col-sm-6 col-lg-4">
-                    <div class="card text-center" style="height: 98%;padding: 5%;">
-                        <div>
-                            <img src="https://www.mypokecard.com/my/galery/PjGzcs9a7j.jpg" class="card-img-top border border-black" alt="..." style="width: 60%;;border-radius: 50%; aspect-ratio: 1; object-fit: cover;">
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">Jao da silva</p>
-                            <p class="card-text">Idade: 93</p>
-                            <a href="#" class="btn btn-primary">Editar</a>
+                <% for(let i=0;i<alunos.length;i++){ %>
+                    <div class="container col-sm-6 col-lg-4">
+                        <div class="card text-center" style="height: 98%;padding: 5%;">
+                            <div>
+                                <img src="<%= alunos[i].Foto %>" class="card-img-top border border-black" alt="https://china.org.br/wp-content/uploads/2024/02/f960x540-124113_198188_0.webp" style="width: 60%;;border-radius: 50%; aspect-ratio: 1; object-fit: cover;">
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text"><%= alunos[i].Nome %></p>
+                                <p class="card-text"><%= alunos[i].Idade %></p>
+                                <a href="#" class="btn btn-primary">Editar</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <% } %>
+
 
             </div>
         </div>

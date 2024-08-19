@@ -24,5 +24,16 @@ module.exports = {
         });
         // Renderizando e passando o nome das salas para o front
         res.render('../views/RegisterStudent', {salas});
+    },
+    async alunoInsert(req,res){
+        const dados = req.body;
+        await aluno.create({
+            Nome: dados.StudentName,
+            Idade: dados.StudentAge,
+            Sexo: dados.StudentSex,
+            Foto: dados.ImgLink,
+            IDSala: dados.IdSala
+        })
+        res.redirect('/');
     }
 }

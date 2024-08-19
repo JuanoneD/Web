@@ -1,4 +1,5 @@
 const express = require('express');
+const config = require("./src/config/db")
 const routes = require('./routes');
 
 const app = express();
