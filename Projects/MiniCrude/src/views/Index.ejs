@@ -60,12 +60,12 @@
                     <div class="container col-sm-6 col-lg-4">
                         <div class="card text-center" style="height: 98%;padding: 5%;">
                             <div>
-                                <img src="<%= alunos[i].Foto %>" class="card-img-top border border-black" alt="https://china.org.br/wp-content/uploads/2024/02/f960x540-124113_198188_0.webp" style="width: 60%;;border-radius: 50%; aspect-ratio: 1; object-fit: cover;">
+                                <img src="/img/<%= alunos[i].Foto %>" class="card-img-top border border-black" alt="/img/DefaultUser.png" style="width: 60%;;border-radius: 50%; aspect-ratio: 1; object-fit: cover;">
                             </div>
                             <div class="card-body">
-                                <p class="card-text"><%= alunos[i].Nome %></p>
-                                <p class="card-text"><%= alunos[i].Idade %></p>
-                                <a href="#" class="btn btn-primary">Editar</a>
+                                <p class="card-text fw-bold"><%= alunos[i].Nome %></p>
+                                <p class="card-text">Idade: <%= alunos[i].Idade %></p>
+                                <a href="/UpdateStudent/<%=alunos[i].IDAluno%>" class="btn btn-primary">Editar</a>
                             </div>
                         </div>
                     </div>

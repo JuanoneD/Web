@@ -38,30 +38,30 @@
             </div>
             <form method="post" enctype="multipart/form-data">
                 <div class="text-center">
-                    <input type="file" id="ImgLink" name="ImgLink" value="DefaultUser"  hidden oninput="UpdateImg()">
-                    <img src="/img/DefaultUser.png" class="card-img-top border border-black" alt="..." style=" width: 50%;border-radius: 50%; aspect-ratio: 1; object-fit: cover;cursor: pointer;" id ="UserImg" onclick="ChangeImg()">
+                    <input type="file" id="ImgLink" name="ImgLink" hidden oninput="UpdateImg()">
+                    <img src="/img/<%= alunos.Foto%>" class="card-img-top border border-black" alt="..." style=" width: 50%;border-radius: 50%; aspect-ratio: 1; object-fit: cover;cursor: pointer;" id ="UserImg" onclick="ChangeImg()">
                 </div>
                 <div class="mb-3">
                     <label for="StudentName" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="StudentName"  name="StudentName" aria-describedby="Nome do Estudante">
+                    <input type="text" value="<%= alunos.Nome%>" class="form-control" id="StudentName"  name="StudentName" aria-describedby="Nome do Estudante">
                 </div>
                 <div class="mb-3">
                     <label for="StudentAge" class="form-label">Idade</label>
-                    <input type="number" class="form-control" id="StudentAge"  name="StudentAge" aria-describedby="idade do Estudante">
+                    <input type="number" value="<%= alunos.Idade%>" class="form-control" id="StudentAge"  name="StudentAge" aria-describedby="idade do Estudante">
                 </div>
                 <div class="mb-3">
                     <label for="StudentSex" class="form-label">Sexo</label>
-                    <input type="text" class="form-control" id="StudentSex"  name="StudentSex" aria-describedby="idade do Estudante">
+                    <input type="text" value="<%= alunos.Sexo%>" class="form-control" id="StudentSex"  name="StudentSex" aria-describedby="idade do Estudante">
                 </div>
                 <div class="mb-3">
                     <label for="Select" class="form-label">Sala</label>
                     <select id="Select"  name="IdSala"  class="form-select">
                         <%for(let i=0;i<salas.length;i++){ %>
-                            <option value="<%=salas[i].IDSala%>"><%=salas[i].Nome%></option>
+                            <option value="<%=salas[i].IDSala%>" <%= salas[i].IDSala == alunos.IDSala? "selected": "" %>><%=salas[i].Nome%></option>
                         <%}%>
                     </select>
                   </div>
-                  <button type="submit" class="btn btn-primary fw-bold text-uppercase">Cadastrar</button>
+                  <button type="submit" class="btn btn-primary fw-bold text-uppercase">Atualizar</button>
             </form>
         </div>
 

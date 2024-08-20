@@ -26,12 +26,16 @@ module.exports = {
         res.render('../views/RegisterStudent', {salas});
     },
     async alunoInsert(req,res){
+        let picture = 'DefaultUser.png';
+        if(req.file){
+            picture = req.file.filename;
+        }
         const dados = req.body;
         await aluno.create({
             Nome: dados.StudentName,
             Idade: dados.StudentAge,
             Sexo: dados.StudentSex,
-            Foto: dados.ImgLink,
+            Foto: picture,
             IDSala: dados.IdSala
         })
         res.redirect('/');
