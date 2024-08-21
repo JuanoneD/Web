@@ -15,6 +15,16 @@ module.exports = {
     async update(req,res){
         const dados = req.body;
         const id = req.params.id;
+
+        let salas = await sala.findByPk(dados.IdSala,{
+            raw:true,
+            attributes: ['IDSala','Nome','Capacidade','Maxima','Minima']
+        })
+
+        if(dados.StudentAge>=salas.Maxima || dados.StudentAge<=salas.Minima){
+            return;
+        }
+
         await aluno.update({
             Nome: dados.StudentName,
             Idade: dados.StudentAge,

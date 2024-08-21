@@ -37,7 +37,7 @@ module.exports = {
             attributes: ['IDSala','Nome','Capacidade','Maxima','Minima']
         })
 
-        if(dados.StudentAge>=salas.Maxima || dados.StudentAge<=salas.Minima){
+        if(dados.StudentAge>salas.Maxima || dados.StudentAge<salas.Minima){
             return;
         }
 

@@ -57,7 +57,7 @@
                     <label for="Select" class="form-label">Sala</label>
                     <select id="Select"  name="IdSala"  class="form-select">
                         <%for(let i=0;i<salas.length;i++){ %>
-                            <option value="<%=salas[i].IDSala%>" <%= salas[i].IDSala == alunos.IDSala? "selected": "" %>><%=salas[i].Nome%></option>
+                            <option value="<%=salas[i].IDSala%>" <%= salas[i].IDSala == alunos.IDSala? "selected": "" %>><%=salas[i].Nome%> | Idade Minima: <%=salas[i].Minima%> | Idade Maxima: <%=salas[i].Maxima%> |</option>
                         <%}%>
                     </select>
                   </div>
