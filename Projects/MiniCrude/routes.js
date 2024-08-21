@@ -18,5 +18,7 @@ route.post('/Index',home.pagInicialPost);
 route.post('/',home.pagInicialPost);
 route.get('/UpdateStudent/:id',editar.alunos);
 route.post('/UpdateStudent/:id',multer(config).single('ImgLink'),editar.update);
+route.get('/UpdateClass/:id',editar.Salas);
+route.post('/UpdateClass/:id',editar.UpdateSalas);
 
 module.exports = route;

@@ -1,6 +1,5 @@
 const sala = require('../model/sala');
 const aluno = require('../model/aluno');
-const { Where } = require('sequelize/lib/utils');
 
 module.exports = {
     async alunos(req,res){
@@ -10,7 +9,7 @@ module.exports = {
             raw:true,
             attributes: ['IDAluno','Nome','Idade','Sexo','Foto','IDSala']
         });
-        const salas = await sala.findAll({raw:true,attributes:['IDSala','Nome']});
+        const salas = await sala.findAll({raw:true,attributes:['IDSala','Nome','Maxima','Minima']});
         res.render('../views/UpdateStudent',{salas,alunos});
     },
     async update(req,res){
@@ -36,9 +35,28 @@ module.exports = {
             }))
             await aluno.update(
                 {Foto: req.file.filename},
-                {Where : {IDAluno: id}}
+                {where : {IDAluno: id}}
             );
         }
+        res.redirect('/');
+    },
+    async Salas(req,res){
+        const update_id = req.params.id; /// arrumar lugar para pegar o id da sala
+        const salas = await sala.findByPk(update_id,{
+            raw:true,
+            attributes: ['IDSala','Nome','Capacidade','Maxima','Minima']
+        });
+        res.render('../views/UpdateClass',{salas});
+    },
+    async UpdateSalas(req,res){
+        const dados = req.body;
+        const id = req.params.id;
+        await sala.update({
+            Nome: dados.ClassRoomName, 
+            Capacidade: dados.ClassRoomCapacity,
+            Minima: dados.ClassRoomMinAge,
+            Maxima: dados.ClassRoomMaxAge
+        },{where : {IDSala : id}});
         res.redirect('/');
     }
 }

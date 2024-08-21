@@ -31,29 +31,28 @@
         </div>
     </header>
     <main>
-
         <div class="container col-sm-8 col-md-4 border" style="padding: 1%; margin-top: 1%;">
             <div>
-                <p class="fw-bold text-center fs-4">Cadastrar Sala</p>
+                <p class="fw-bold text-center fs-4">Editar Sala</p>
             </div>
             <form method="post">
                 <div class="mb-3">
                     <label for="ClassRoomName" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="ClassRoomName" name="ClassRoomName" aria-describedby="Nome do Estudante">
+                    <input type="text" class="form-control" id="ClassRoomName" name="ClassRoomName" aria-describedby="Nome do Estudante"  value = "<%= salas.Nome%>">
                 </div>
                 <div class="mb-3">
-                    <label for="ClassRoomCapacity" class="form-label">Capacidade</label>
-                    <input type="number" class="form-control" id="ClassRoomCapacity"  name="ClassRoomCapacity" aria-describedby="idade do Estudante">
+                    <label for="ClassRoomCapacity" class="form-label" >Capacidade</label>
+                    <input type="number" class="form-control" id="ClassRoomCapacity"  name="ClassRoomCapacity" aria-describedby="idade do Estudante" value = "<%= salas.Capacidade%>">
                 </div>
                 <div class="mb-3">
                     <label for="ClassRoomMinAge" class="form-label">Idade minima</label>
-                    <input type="number" class="form-control" id="ClassRoomMinAge" name="ClassRoomMinAge" aria-describedby="Nome do Estudante">
+                    <input type="number" class="form-control" id="ClassRoomMinAge" name="ClassRoomMinAge" aria-describedby="Nome do Estudante" value="<%= salas.Minima%>">
                 </div>
                 <div class="mb-3">
                     <label for="ClassRoomMaxAge" class="form-label">Idade máxima</label>
-                    <input type="number" class="form-control" id="ClassRoomMaxAge" name="ClassRoomMaxAge" aria-describedby="Nome do Estudante">
+                    <input type="number" class="form-control" id="ClassRoomMaxAge" name="ClassRoomMaxAge" aria-describedby="Nome do Estudante" value="<%= salas.Maxima%>">
                 </div>
-                  <button type="submit" class="btn btn-primary fw-bold text-uppercase">Cadastrar</button>
+                  <button type="submit" class="btn btn-primary fw-bold text-uppercase">Editar</button>
             </form>
         </div>
 

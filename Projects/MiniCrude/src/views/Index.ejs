@@ -36,17 +36,19 @@
         <div class="container d-flex justify-content-end" style="margin-top: 1%;">
 
             <form method="post" onchange="document.getElementById('mudarSala').click()">
-                <div class="d-flex ">
+                <div class="d-flex">
                     <label for="Select" class="form-label p-2">Sala:</label>
                     <select id="Select" name="sala_filter" class="form-select">
-                        <option value="">Selecionar um opção</option>
+                        <option value="">Selecionar uma opção</option>
                         <% for(let i=0;i<salas.length;i++){ %>
-                        <option value='<%= salas[i].IDSala %>' <%= id_filter == salas[i].IDSala ? 'selected' : ''%>> <%= salas[i].Nome %> </option>
-                    <% } %>
+                            <option value='<%= salas[i].IDSala %>' <%= id_filter == salas[i].IDSala ? 'selected' : ''%>> <%= salas[i].Nome %> </option>
+                        <% } %>
                     </select>
+                    <a class="btn btn-primary" style="height: 100%;margin-left: 2%; margin-top: 1.6%;" href="/UpdateClass/<%=id_filter%>" <%= !id_filter?'hidden':'' %>>Editar</a>
                 </div>
                 <input type="submit" hidden id="mudarSala">
             </form>
+            
 
         </div>
         <div class="container">

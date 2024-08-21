@@ -16,6 +16,14 @@ const sala = database.define('Sala', {
     Capacidade: {
         type: Sequelize.INTEGER,
         allowNull: false
+    },
+    Minima:{
+        type: Sequelize.INTEGER,
+        allowNull: true
+    },
+    Maxima:{
+        type: Sequelize.INTEGER,
+        allowNull: true
     }
 });
 // Exportando essa tabela
